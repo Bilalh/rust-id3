@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Flags","Flags used in ID3 frames."]]});

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `util` mod in crate `id3`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, util">
+
+    <title>id3::util - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>id3</a></p><script>window.sidebarCurrent = {name: 'util', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>id3</a>::<wbr><a class='mod' href=''>util</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-13' class='srclink' href='../../src/id3/util.rs.html#1-357' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Utilities used for reading/writing ID3 tags.</p>
+</div><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.convert_id_2_to_3.html'
+                               title='id3::util::convert_id_2_to_3'>convert_id_2_to_3</a></td>
+                        <td class='docblock short'>
+                             <p>Returns the coresponding ID3v2.3/ID3v2.4 ID given the ID3v2.2 ID.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.convert_id_3_to_2.html'
+                               title='id3::util::convert_id_3_to_2'>convert_id_3_to_2</a></td>
+                        <td class='docblock short'>
+                             <p>Returns the coresponding ID3v2.2 ID given the ID3v2.3/ID3v2.3 ID.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.delim_len.html'
+                               title='id3::util::delim_len'>delim_len</a></td>
+                        <td class='docblock short'>
+                             <p>Returns the delimiter length for the specified encoding.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.find_delim.html'
+                               title='id3::util::find_delim'>find_delim</a></td>
+                        <td class='docblock short'>
+                             <p>Returns the index of the first delimiter for the specified encoding.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_from_encoding.html'
+                               title='id3::util::string_from_encoding'>string_from_encoding</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a string created from the vector using the specified encoding.
+Returns <code>None</code> if the vector is not a valid string of the specified
+encoding type.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_from_utf16.html'
+                               title='id3::util::string_from_utf16'>string_from_utf16</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a string created from the vector using UTF-16 (with byte order mark) encoding.
+Returns <code>None</code> if the vector is not a valid UTF-16 string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_from_utf16be.html'
+                               title='id3::util::string_from_utf16be'>string_from_utf16be</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a string created from the vector using UTF-16BE encoding.
+Returns <code>None</code> if the vector is not a valid UTF-16BE string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_from_utf16le.html'
+                               title='id3::util::string_from_utf16le'>string_from_utf16le</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a string created from the vector using UTF-16LE encoding.
+Returns <code>None</code> if the vector is not a valid UTF-16LE string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_from_utf8.html'
+                               title='id3::util::string_from_utf8'>string_from_utf8</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a string created from the vector using UTF-8 encoding, removing any trailing null
+bytes.
+Returns <code>None</code> if the vector is not a valid UTF-8 string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_to_utf16.html'
+                               title='id3::util::string_to_utf16'>string_to_utf16</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a UTF-16 (with native byte order) vector representation of the string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_to_utf16be.html'
+                               title='id3::util::string_to_utf16be'>string_to_utf16be</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a UTF-16BE vector representation of the string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.string_to_utf16le.html'
+                               title='id3::util::string_to_utf16le'>string_to_utf16le</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a UTF-16LE vector representation of the string.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.synchsafe.html'
+                               title='id3::util::synchsafe'>synchsafe</a></td>
+                        <td class='docblock short'>
+                             <p>Returns the synchsafe varaiant of a <code>u32</code> value.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.unsynchsafe.html'
+                               title='id3::util::unsynchsafe'>unsynchsafe</a></td>
+                        <td class='docblock short'>
+                             <p>Returns the unsynchsafe varaiant of a <code>u32</code> value.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.uuid.html'
+                               title='id3::util::uuid'>uuid</a></td>
+                        <td class='docblock short'>
+                             <p>Returns a random sequence of 16 bytes, intended to be used as a UUID.</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='impls' class='section-header'><a href="#impls">Implementations</a></h2>
+<table></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "id3";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

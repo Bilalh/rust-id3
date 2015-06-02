@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Content` enum in crate `id3`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Content">
+
+    <title>id3::frame::Content - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>id3</a>::<wbr><a href='index.html'>frame</a></p><script>window.sidebarCurrent = {name: 'Content', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>id3</a>::<wbr><a href='index.html'>frame</a>::<wbr><a class='enum' href=''>Content</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-2771' class='srclink' href='../../src/id3/frame/content.rs.html#3-20' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Content {
+    Text(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    ExtendedText(<a class='struct' href='../../id3/frame/struct.ExtendedText.html' title='id3::frame::ExtendedText'>ExtendedText</a>),
+    Link(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    ExtendedLink(<a class='struct' href='../../id3/frame/struct.ExtendedLink.html' title='id3::frame::ExtendedLink'>ExtendedLink</a>),
+    Comment(<a class='struct' href='../../id3/frame/struct.Comment.html' title='id3::frame::Comment'>Comment</a>),
+    Lyrics(<a class='struct' href='../../id3/frame/struct.Lyrics.html' title='id3::frame::Lyrics'>Lyrics</a>),
+    Picture(<a class='struct' href='../../id3/frame/struct.Picture.html' title='id3::frame::Picture'>Picture</a>),
+    Unknown(<a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;),
+}</pre><div class='docblock'><p>The decoded contents of a frame.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Text'><code>Text</code></td><td><div class='docblock'><p>A value containing the parsed contents of a text frame.</p>
+</div></td></tr><tr><td id='variant.ExtendedText'><code>ExtendedText</code></td><td><div class='docblock'><p>A value containing the parsed contents of a user defined text frame (TXXX).</p>
+</div></td></tr><tr><td id='variant.Link'><code>Link</code></td><td><div class='docblock'><p>A value containing the parsed contents of a web link frame.</p>
+</div></td></tr><tr><td id='variant.ExtendedLink'><code>ExtendedLink</code></td><td><div class='docblock'><p>A value containing the parsed contents of a user defined web link frame (WXXX).</p>
+</div></td></tr><tr><td id='variant.Comment'><code>Comment</code></td><td><div class='docblock'><p>A value containing the parsed contents of a comment frame (COMM).</p>
+</div></td></tr><tr><td id='variant.Lyrics'><code>Lyrics</code></td><td><div class='docblock'><p>A value containing the parsed contents of a lyrics frame (USLT).</p>
+</div></td></tr><tr><td id='variant.Picture'><code>Picture</code></td><td><div class='docblock'><p>A value containing the parsed contents of a picture frame (APIC).</p>
+</div></td></tr><tr><td id='variant.Unknown'><code>Unknown</code></td><td><div class='docblock'><p>A value containing the bytes of a unknown frame.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='enum' href='../../id3/frame/enum.Content.html' title='id3::frame::Content'>Content</a></code></h3><div class='impl-items'><h4 id='method.text' class='method'><code>fn <a href='#method.text' class='fnname'>text</a>(&amp;self) -&gt; &amp;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Returns the <code>Text</code>.
+Panics if the value is not <code>Text</code>.</p>
+</div><h4 id='method.extended_text' class='method'><code>fn <a href='#method.extended_text' class='fnname'>extended_text</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../id3/frame/struct.ExtendedText.html' title='id3::frame::ExtendedText'>ExtendedText</a></code></h4>
+<div class='docblock'><p>Returns the <code>ExtendedText</code>.
+Panics if the value is not <code>ExtendedText</code>.</p>
+</div><h4 id='method.link' class='method'><code>fn <a href='#method.link' class='fnname'>link</a>(&amp;self) -&gt; &amp;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></h4>
+<div class='docblock'><p>Returns the <code>Link</code>.
+Panics if the value is not <code>Link</code>.</p>
+</div><h4 id='method.extended_link' class='method'><code>fn <a href='#method.extended_link' class='fnname'>extended_link</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../id3/frame/struct.ExtendedLink.html' title='id3::frame::ExtendedLink'>ExtendedLink</a></code></h4>
+<div class='docblock'><p>Returns the <code>ExtendedLink</code>.
+Panics if the value is not <code>ExtendedLink</code>.</p>
+</div><h4 id='method.comment' class='method'><code>fn <a href='#method.comment' class='fnname'>comment</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../id3/frame/struct.Comment.html' title='id3::frame::Comment'>Comment</a></code></h4>
+<div class='docblock'><p>Returns the <code>Comment</code>.
+Panics if the value is not <code>Comment</code>.</p>
+</div><h4 id='method.lyrics' class='method'><code>fn <a href='#method.lyrics' class='fnname'>lyrics</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../id3/frame/struct.Lyrics.html' title='id3::frame::Lyrics'>Lyrics</a></code></h4>
+<div class='docblock'><p>Returns the <code>Lyrics</code>.
+Panics if the value is not <code>Lyrics</code>.</p>
+</div><h4 id='method.picture' class='method'><code>fn <a href='#method.picture' class='fnname'>picture</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../id3/frame/struct.Picture.html' title='id3::frame::Picture'>Picture</a></code></h4>
+<div class='docblock'><p>Returns the <code>Picture</code>.
+Panics if the value is not <code>Picture</code>.</p>
+</div><h4 id='method.unknown' class='method'><code>fn <a href='#method.unknown' class='fnname'>unknown</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+<div class='docblock'><p>Returns the <code>Unknown</code>.
+Panics if the value is not <code>Unknown</code>.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../id3/frame/enum.Content.html' title='id3::frame::Content'>Content</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "id3";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

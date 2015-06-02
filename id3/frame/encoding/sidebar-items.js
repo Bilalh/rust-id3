@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Encoding","Types of text encodings used in ID3 frames."]]});

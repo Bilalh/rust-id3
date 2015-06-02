@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["PictureType","Types of pictures used in APIC frames."]],"struct":[["Picture","A structure representing an ID3 picture frame's contents."]]});

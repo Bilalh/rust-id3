@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ErrorKind","Kinds of errors that may occur while performing metadata operations."]],"struct":[["Error","A structure able to represent any error that may occur while performing metadata operations."]],"type":[["Result","Type alias for the result of tag operations."]]});

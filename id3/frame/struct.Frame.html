@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Frame` struct in crate `id3`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Frame">
+
+    <title>id3::frame::Frame - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>id3</a>::<wbr><a href='index.html'>frame</a></p><script>window.sidebarCurrent = {name: 'Frame', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>id3</a>::<wbr><a href='index.html'>frame</a>::<wbr><a class='struct' href=''>Frame</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-6747' class='srclink' href='../../src/id3/frame/mod.rs.html#59-72' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Frame {
+    pub uuid: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;,
+    pub id: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub encoding: <a class='enum' href='../../id3/frame/enum.Encoding.html' title='id3::frame::Encoding'>Encoding</a>,
+    pub content: <a class='enum' href='../../id3/frame/enum.Content.html' title='id3::frame::Content'>Content</a>,
+    pub offset: <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    // some fields omitted
+}</pre><div class='docblock'><p>A structure representing an ID3 frame.</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                                  <td id='structfield.uuid'><code>uuid</code></td><td><div class='docblock'><p>A sequence of 16 bytes used to uniquely identify this frame.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.id'><code>id</code></td><td><div class='docblock'><p>The frame identifier.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.encoding'><code>encoding</code></td><td><div class='docblock'><p>The preferred encoding to be used when converting this frame to bytes.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.content'><code>content</code></td><td><div class='docblock'><p>The parsed content of the frame.</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.offset'><code>offset</code></td><td><div class='docblock'><p>The offset of this frame in the file from which it was loaded.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../id3/frame/struct.Frame.html' title='id3::frame::Frame'>Frame</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>&lt;T: <a class='trait' href='http://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(id: T) -&gt; <a class='struct' href='../../id3/frame/struct.Frame.html' title='id3::frame::Frame'>Frame</a></code></h4>
+<div class='docblock'><p>Creates a new ID3v2.3 frame with the specified identifier.</p>
+</div><h4 id='method.compression' class='method'><code>fn <a href='#method.compression' class='fnname'>compression</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns whether the compression flag is set.</p>
+</div><h4 id='method.set_compression' class='method'><code>fn <a href='#method.set_compression' class='fnname'>set_compression</a>(&amp;mut self, compression: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></h4>
+<div class='docblock'><p>Sets the compression flag.</p>
+</div><h4 id='method.tag_alter_preservation' class='method'><code>fn <a href='#method.tag_alter_preservation' class='fnname'>tag_alter_preservation</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns whether the tag_alter_preservation flag is set.</p>
+</div><h4 id='method.set_tag_alter_preservation' class='method'><code>fn <a href='#method.set_tag_alter_preservation' class='fnname'>set_tag_alter_preservation</a>(&amp;mut self, tag_alter_preservation: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></h4>
+<div class='docblock'><p>Sets the tag_alter_preservation flag.</p>
+</div><h4 id='method.file_alter_preservation' class='method'><code>fn <a href='#method.file_alter_preservation' class='fnname'>file_alter_preservation</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Returns whether the file_alter_preservation flag is set.</p>
+</div><h4 id='method.set_file_alter_preservation' class='method'><code>fn <a href='#method.set_file_alter_preservation' class='fnname'>set_file_alter_preservation</a>(&amp;mut self, file_alter_preservation: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></h4>
+<div class='docblock'><p>Sets the file_alter_preservation flag.</p>
+</div><h4 id='method.generate_uuid' class='method'><code>fn <a href='#method.generate_uuid' class='fnname'>generate_uuid</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>Generates a new uuid for this frame.</p>
+
+<h1 id="example" class='section-header'><a
+                           href="#example">Example</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>id3</span>::<span class='ident'>Frame</span>;
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>frame</span> <span class='op'>=</span> <span class='ident'>Frame</span>::<span class='ident'>new</span>(<span class='string'>&quot;TYER&quot;</span>);
+<span class='kw'>let</span> <span class='ident'>prev_uuid</span> <span class='op'>=</span> <span class='ident'>frame</span>.<span class='ident'>uuid</span>.<span class='ident'>clone</span>();
+<span class='ident'>frame</span>.<span class='ident'>generate_uuid</span>();
+<span class='macro'>assert</span><span class='macro'>!</span>(<span class='ident'>prev_uuid</span> <span class='op'>!=</span> <span class='ident'>frame</span>.<span class='ident'>uuid</span>);
+</pre>
+</div><h4 id='method.read_from' class='method'><code>fn <a href='#method.read_from' class='fnname'>read_from</a>(reader: &amp;mut <a class='trait' href='http://doc.rust-lang.org/nightly/std/io/trait.Read.html' title='std::io::Read'>Read</a>, version: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>) -&gt; <a class='type' href='../../id3/type.Result.html' title='id3::Result'>Result</a>&lt;<a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, <a class='struct' href='../../id3/frame/struct.Frame.html' title='id3::frame::Frame'>Frame</a>)</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Attempts to read a frame from the reader.</p>
+
+<p>Returns a tuple containing the number of bytes read and a frame. If pading is encountered
+then <code>None</code> is returned.</p>
+
+<p>Only reading from versions 2, 3, and 4 is supported. Attempting to read any other version
+will return an error with kind <code>UnsupportedVersion</code>. </p>
+</div><h4 id='method.write_to' class='method'><code>fn <a href='#method.write_to' class='fnname'>write_to</a>(&amp;self, writer: &amp;mut <a class='trait' href='http://doc.rust-lang.org/nightly/std/io/trait.Write.html' title='std::io::Write'>Write</a>, version: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>) -&gt; <a class='type' href='../../id3/type.Result.html' title='id3::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<div class='docblock'><p>Attempts to write the frame to the writer.</p>
+
+<p>Returns the number of bytes written.</p>
+
+<p>Only writing to versions 2, 3, and 4 is supported. Attempting to write using any other
+version will return an error with kind <code>UnsupportedVersion</code>.</p>
+</div><h4 id='method.content_to_bytes' class='method'><code>fn <a href='#method.content_to_bytes' class='fnname'>content_to_bytes</a>(&amp;self, version: <a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;</code></h4>
+<div class='docblock'><p>Creates a vector representation of the content suitable for writing to an ID3 tag.</p>
+</div><h4 id='method.parse_data' class='method'><code>fn <a href='#method.parse_data' class='fnname'>parse_data</a>(&amp;mut self, data: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../id3/type.Result.html' title='id3::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<div class='docblock'><p>Parses the provided data and sets the <code>content</code> field. If the compression flag is set to
+true then decompression will be performed.</p>
+
+<p>Returns <code>Err</code> if the data is invalid for the frame type.</p>
+</div><h4 id='method.text' class='method'><code>fn <a href='#method.text' class='fnname'>text</a>(&amp;self) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='http://doc.rust-lang.org/nightly/collections/borrow/enum.Cow.html' title='collections::borrow::Cow'>Cow</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;&gt;</code></h4>
+<div class='docblock'><p>Returns a string representing the parsed content.</p>
+
+<p>Returns <code>None</code> if the parsed content can not be represented as text.</p>
+
+<h1 id="example" class='section-header'><a
+                           href="#example">Example</a></h1><pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>id3</span>::<span class='ident'>frame</span>::{<span class='self'>self</span>, <span class='ident'>Frame</span>, <span class='ident'>Content</span>};
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>title_frame</span> <span class='op'>=</span> <span class='ident'>Frame</span>::<span class='ident'>new</span>(<span class='string'>&quot;TIT2&quot;</span>);
+<span class='ident'>title_frame</span>.<span class='ident'>content</span> <span class='op'>=</span> <span class='ident'>Content</span>::<span class='ident'>Text</span>(<span class='string'>&quot;title&quot;</span>.<span class='ident'>to_owned</span>());
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='kw-2'>&amp;</span><span class='ident'>title_frame</span>.<span class='ident'>text</span>().<span class='ident'>unwrap</span>()[..], <span class='string'>&quot;title&quot;</span>);
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>txxx_frame</span> <span class='op'>=</span> <span class='ident'>Frame</span>::<span class='ident'>new</span>(<span class='string'>&quot;TXXX&quot;</span>);
+<span class='ident'>txxx_frame</span>.<span class='ident'>content</span> <span class='op'>=</span> <span class='ident'>Content</span>::<span class='ident'>ExtendedText</span>(<span class='ident'>frame</span>::<span class='ident'>ExtendedText</span> { 
+    <span class='ident'>key</span>: <span class='string'>&quot;key&quot;</span>.<span class='ident'>to_owned</span>(), 
+    <span class='ident'>value</span>: <span class='string'>&quot;value&quot;</span>.<span class='ident'>to_owned</span>()
+});
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='kw-2'>&amp;</span><span class='ident'>txxx_frame</span>.<span class='ident'>text</span>().<span class='ident'>unwrap</span>()[..], <span class='string'>&quot;key: value&quot;</span>);
+</pre>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../id3/frame/struct.Frame.html' title='id3::frame::Frame'>Frame</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, other: &amp;<a class='struct' href='../../id3/frame/struct.Frame.html' title='id3::frame::Frame'>Frame</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;<a class='struct' href='../../id3/frame/struct.Frame.html' title='id3::frame::Frame'>Frame</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "id3";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
